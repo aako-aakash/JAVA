@@ -4,5 +4,5 @@
 /**
  * 
  */
-module DSA_With_Java {
+module Java_with_OOPS {
 }
