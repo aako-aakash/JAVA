@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Java_with_OOPS {
+module Java_And_OOPM_Practicals {
 }

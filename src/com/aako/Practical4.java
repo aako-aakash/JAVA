@@ -1,35 +1,46 @@
 package com.aako;
 
-class Calculator1 {
+class Person {
+    String name;
+    int age;
 
-  
-  int add(int a, int b) {
-      return a + b;
-  }
+    // Constructor Overloading
+    Person() {
+        name = "Unknown";
+        age = 0;
+    }
 
+    Person(String n) {
+        name = n;
+        age = 21;
+    }
 
-  double add(double a, double b) {
-      return a + b;
-  }
+    Person(String n, int a) {
+        name = n;
+        age = a;
+    }
 
- 
-  double add(int a, double b) {
-      return a + b;
-  }
+    // Method Overloading
+    void display() {
+        System.out.println("Name: " + name);
+    }
 
- 
-  double add(double a, int b) {
-      return a + b;
-  }
+    void display(String msg) {
+        System.out.println(msg + " " + name + ", Age: " + age);
+    }
 }
 
 public class Practical4 {
-  public static void main(String[] args) {
-      Calculator1 calc = new Calculator1();
+    public static void main(String[] args) {
+        // Constructor Overloading
+        Person p1 = new Person();
+        Person p2 = new Person("Aakash");
+        Person p3 = new Person("AAKO", 20);
 
-      System.out.println("Sum of 5 and 10 (int): " + calc.add(5, 10));
-      System.out.println("Sum of 5.5 and 6.5 (double): " + calc.add(5.5, 6.5));
-      System.out.println("Sum of 5 (int) and 7.5 (double): " + calc.add(5, 7.5));
-      System.out.println("Sum of 4.5 (double) and 3 (int): " + calc.add(4.5, 3));
-  }
+        // Method Overloading
+        p1.display();
+        p2.display("Welcome");
+        p3.display("Hello");
+    }
 }
+
